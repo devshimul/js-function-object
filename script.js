@@ -15,9 +15,51 @@
 // const sum = added(445, 45);
 // console.log(sum);
 
-function appleOrangeJuice(apples, oranges, papaya) {
-  const juice = `Juice with ${apples} apples and ${oranges} oranges. Also make juice with ${papaya} papaya`;
+const juice = appleOrangeJuice(2, 1);
+console.log(juice);
+
+function cutPices(fruit) {
+  const pices = fruit * 4;
+  return pices;
+}
+
+function appleOrangeJuice(apples, oranges) {
+  const applesPices = cutPices(apples);
+  const orangePices = cutPices(oranges);
+
+  const juice = `Juice with ${applesPices} pieces apples and ${orangePices} pices oranges.`;
   return juice;
 }
-const juice = appleOrangeJuice(1, 2, 1);
-console.log(juice);
+
+// console.log(juice);
+
+// There are three types of function
+/**
+ * Function declaration
+ * Function Expression
+ * Arrow Function
+ */
+
+// function subtract(){}
+
+const subtract = function (num1, num2) {
+  return num1 - num2;
+};
+
+const result = subtract(45, 15);
+console.log(result);
+// const multiply = (num1, num2) => console.log(num1 - num2);
+// multiply(10, 5);
+
+const numbers = [45, 88, 77, 96, 36, 51, 57, 54, 47, 85, 107];
+
+function arrSum(numbers) {
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    let singleValue = numbers[i];
+    total = total + singleValue;
+  }
+  return total;
+}
+const resultSum = arrSum(numbers);
+console.log(resultSum);
